@@ -1,0 +1,87 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Request for a Quote</title>
+
+        <!-- tailwind -->
+        <link rel="stylesheet" href="/build/tailwind.css">
+        
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+            integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;700;800&family=Montserrat:wght@500;700&display=swap"
+            rel="stylesheet">
+        
+        <!-- styles -->
+        <style>
+            @font-face {
+                font-family:'Montserrat', sans-serif;
+                src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+            }
+            @font-face {
+                font-family:'Jost', sans-serif;
+                src: url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700;800&display=swap');
+            }
+            .font-montserrat {
+                font-family: 'Montserrat', sans-serif;
+            }
+            .font-jost {
+                font-family: 'Jost', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex justify-center w-full bg-cover" style="background-image: url(pictures/bgrq.svg);">
+            <form class="h-auto px-6 py-20 space-y-12 text-lg text-center text-gray-900 font-montserrat md:text-left md:text-xl">
+                <div class="space-y-4">
+                    <h1 class="text-2xl font-extrabold md:text-3xl font-jost"><span class="text-[#C50101]">* </span>What's your name?</h1>
+                    <input type="text" class="w-full font-medium bg-transparent border-b-2 border-gray-900 h-14 focus:outline-none"/>
+                    <p>Thank you for showing interest in our service</p>
+                </div>
+                <div class="space-y-4">
+                    <h1 class="text-2xl font-extrabold font-jost md:text-3xl"><span class="text-[#C50101]">* </span>Which email address shall we use?</h1>
+                    <input type="text" class="w-full font-medium bg-transparent border-b-2 border-gray-900 focus:outline-none h-14"/>
+                    <p class="uppercase">enter email</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h1 class="pb-4 text-2xl font-extrabold md:text-3xl font-jost"><span class="text-[#C50101]">* </span>Hey Visitor, pick the video you want us to edit</h1>
+                    <div class="flex items-center justify-between h-12 border border-[#928989] bg-gray-300 w-72">
+                        <p class="px-2">Select a service</p>
+                        <button type="button" class="focus:outline-none bg-[#02B1AF] w-8 h-full" onclick="toggleElement('dropdown')">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="dropdown" class="absolute z-10 flex mt-32 md:mt-24 flex-col hidden py-4 space-y-2 bg-gray-300 h-54 border border-[#928989] w-72">
+                        <p class="px-2">Select a service</p>
+                        <a href="#" class="px-4 hover:bg-[#02B1AF] hover:bg-opacity-50 focus:bg-[#02B1AF] focus:bg-opacity-50">Wedding</a>
+                        <a href="#" class="px-4 hover:bg-[#02B1AF] hover:bg-opacity-50 focus:bg-[#02B1AF] focus:bg-opacity-50">Corporate</a>
+                        <a href="#" class="px-4 hover:bg-[#02B1AF] hover:bg-opacity-50 focus:bg-[#02B1AF] focus:bg-opacity-50">YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="pt-32 space-y-4">
+                    <h1 class="text-2xl font-extrabold md:text-3xl font-jost"><span class="text-[#C50101]">* </span>Tell us about your project</h1>
+                    <textarea rows="10" class="w-full bg-[#02B1AF] p-4 focus:outline-none font-medium text-white resize-none rounded-xl"></textarea>
+                </div>
+                <div class="space-y-2 text-center">
+                    <button class="h-12 text-center uppercase rounded-lg text-white bg-[#02B1AF] w-44">submit</button>
+                    <p>Press ENTER</p>
+                </div>
+            </form>
+        </div>
+        <!-- script -->
+        <script>
+            function toggleElement(elemID) {
+                document.getElementById(elemID).classList.toggle("hidden");
+                document.getElementById(elemID).classList.toggle("block");
+            }
+        </script>
+    </body>
+</html>
